@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Table V01</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->	
+        <link rel="icon" type="image/png" href="src/main/resources/static/images/icons/favicon.ico" th:href="@{/images/icons/favicon.ico}"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"  th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"  th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.min.css}"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"  th:href="@{/vendor/animate/animate.css}"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"  th:href="@{/vendor/select2/select2.min.css}"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"  th:href="@{/static/vendor/perfect-scrollbar/perfect-scrollbar.css}"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"  th:href="@{/css/util.css}"/>
+        <link rel="stylesheet" type="text/css"  th:href="@{/css/main.css}"/>
+        <!--===============================================================================================-->
+    </head>
+    <body>
+
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div class="table100">
+                        <table>
+                            <thead>
+                                <tr class="table100-head">
+                                    <th class="column1">#</th>
+                                    <th class="column2">First Name</th>
+                                    <th class="column3">Surname</th>
+                                    <th class="column4">Age</th>
+                                    <th class="column5">Gender</th>
+                                    <th class="column6">View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="user, iterationStatus : ${users}">
+                                    <td class="column1" th:text="${iterationStatus.count}">1</td>
+                                    <td class="column2" th:text="${user.firstName}">x</td>
+                                    <td class="column3" th:text="${user.surname}">x</td>
+                                    <td class="column4" th:text="${user.age}">x</td>
+                                    <td class="column5" th:text="${user.gender}">x</td>
+                                    <td class="column6"><a th:href="|/users/list/${user.id}|">View</a></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--===============================================================================================-->	
+        <script src="src/main/resources/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="src/main/resources/static/vendor/bootstrap/js/popper.js"></script>
+        <script src="src/main/resources/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="src/main/resources/static/vendor/select2/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="src/main/resources/static/js/main.js"></script>
+
+    </body>
+</html>

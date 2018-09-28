@@ -1,0 +1,20 @@
+{
+    "elements": {},
+    "attributes": {
+        "th:text": {
+            "context": "td"
+        },
+        "layout:decorator": {
+            "context": "html"
+        },
+        "th:each": {
+            "context": "tr"
+        },
+        "th:href": {
+            "context": "a"
+        },
+        "layout:fragment": {
+            "context": "div"
+        }
+    }
+}
